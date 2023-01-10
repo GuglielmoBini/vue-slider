@@ -29,22 +29,19 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div id="root" class="container">
         <div id="carousel">
           <!-- prev button -->
           <i id="prev" class="fa-solid fa-circle-chevron-left fa-3x"></i>
           <div class="gallery h-100">
-            <figure class="h-100 active">
+            <figure v-for="(pic, i) in pictures" :class="{'active' : i === currentIndex}">
               <img
-                src="img/01.webp"
-                alt="Marvel's Spiderman Miles Morales"
+                :src="pic.image"
+                :alt="pic.title"
               />
               <figcaption class="text-white">
-                <h3>Marvel's Spiderman Miles Morales</h3>
-                <p>
-                  Experience the rise of Miles Morales as the new hero masters
-                  incredible, explosive new powers to become his own Spider-Man.
-                </p>
+                <h3>{{ pic.title }}</h3>
+                <p>{{ pic.text }}</p>
               </figcaption>
             </figure>
           </div>
@@ -52,7 +49,7 @@
           <i id="next" class="fa-solid fa-circle-chevron-right fa-3x"></i>
         </div>
         <div id="thumbnails" class="d-flex justify-content-between">
-          <img src="img/01.webp" alt="" class="" />
+          <img v-for="(pic, i) in pictures" :src="pic.image" :alt="pic.title" :class="{'active' : i === currentIndex}" />
       </div>
     </main>
   </body>
