@@ -73,6 +73,10 @@ const app = Vue.createApp({
       // infite loop for next
       if (this.currentIndex === this.pictures.length) this.currentIndex = 0;
     },
+    // function for thumbnails
+    goToI(target) {
+      this.currentIndex = target;
+    },
   },
 });
 

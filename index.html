@@ -51,7 +51,7 @@
         </div>
         <!-- thumbnails -->
         <div id="thumbnails" class="d-flex justify-content-between">
-          <img v-for="(pic, i) in pictures" :src="pic.image" :alt="pic.title" :class="{'active' : i === currentIndex}" />
+          <img v-for="(pic, i) in pictures" :src="pic.image" :alt="pic.title" :class="{'active' : i === currentIndex}" @click="goToI(i)" />
       </div>
     </main>
   </body>
