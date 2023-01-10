@@ -60,6 +60,20 @@ const app = Vue.createApp({
       ],
     };
   },
+  methods: {
+    // function for prev button
+    goToPrev() {
+      this.currentIndex--;
+      // infinite loop for prev
+      if (this.currentIndex < 0) this.currentIndex = this.pictures.length - 1;
+    },
+    // function for next button
+    goToNext() {
+      this.currentIndex++;
+      // infite loop for next
+      if (this.currentIndex === this.pictures.length) this.currentIndex = 0;
+    },
+  },
 });
 
 app.mount("#root");

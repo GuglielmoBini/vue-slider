@@ -19,17 +19,12 @@
 
 figure {
   height: 100%;
-  display: none;
-}
-
-figure.active {
-  display: block;
 }
 
 figcaption {
   position: absolute;
   bottom: 0;
-  left: 15px;
+  right: 15px;
 }
 
 figcaption h3,

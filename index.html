@@ -32,22 +32,24 @@
       <div id="root" class="container">
         <div id="carousel">
           <!-- prev button -->
-          <i id="prev" class="fa-solid fa-circle-chevron-left fa-3x"></i>
+          <i id="prev" class="fa-solid fa-circle-chevron-left fa-3x" @click="goToPrev"></i>
+          <!-- gallery imgs -->
           <div class="gallery h-100">
-            <figure v-for="(pic, i) in pictures" :class="{'active' : i === currentIndex}">
+            <figure v-for="(pic, i) in pictures" v-show="i === currentIndex">
               <img
                 :src="pic.image"
                 :alt="pic.title"
               />
-              <figcaption class="text-white">
+              <figcaption class="text-white text-end">
                 <h3>{{ pic.title }}</h3>
                 <p>{{ pic.text }}</p>
               </figcaption>
             </figure>
           </div>
           <!-- next button -->
-          <i id="next" class="fa-solid fa-circle-chevron-right fa-3x"></i>
+          <i id="next" class="fa-solid fa-circle-chevron-right fa-3x" @click="goToNext"></i>
         </div>
+        <!-- thumbnails -->
         <div id="thumbnails" class="d-flex justify-content-between">
           <img v-for="(pic, i) in pictures" :src="pic.image" :alt="pic.title" :class="{'active' : i === currentIndex}" />
       </div>
