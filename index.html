@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -19,5 +27,33 @@
     <script defer src="js/script.js"></script>
     <title>Vue Slider</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="container">
+        <div id="carousel">
+          <!-- prev button -->
+          <i id="prev" class="fa-solid fa-circle-chevron-left fa-3x"></i>
+          <div class="gallery h-100">
+            <figure class="h-100 active">
+              <img
+                src="img/01.webp"
+                alt="Marvel's Spiderman Miles Morales"
+              />
+              <figcaption class="text-white">
+                <h3>Marvel's Spiderman Miles Morales</h3>
+                <p>
+                  Experience the rise of Miles Morales as the new hero masters
+                  incredible, explosive new powers to become his own Spider-Man.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- next button -->
+          <i id="next" class="fa-solid fa-circle-chevron-right fa-3x"></i>
+        </div>
+        <div id="thumbnails" class="d-flex justify-content-between">
+          <img src="img/01.webp" alt="" class="" />
+      </div>
+    </main>
+  </body>
 </html>
